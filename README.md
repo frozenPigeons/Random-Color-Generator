@@ -5,3 +5,5 @@ For this project I am using OpenCV and random to create a random colour generato
 This project was inspired by coolors.co and I wanted to create something similar
 However instead of purchasing their subscription for their extra features I created them myself.
 This project was made in one day and is still under development
+
+When running the python file you will need to install the openCV package and please note taht OpenCV returns RBG values not RGB
