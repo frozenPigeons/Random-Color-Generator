@@ -5,8 +5,7 @@ import numpy as np
 import os
 
 file_header = random.randint(1, 200000)
-type_of_generation = random.randint(1, 5)
-# type_of_generation = 3
+type_of_generation = random.randint(1, 6)
 
 #dimensions of the canvas
 height = 500
@@ -52,6 +51,32 @@ def darkRandom():
 def invert(colour):
     invertedColour = [256 - colour[0], 256 - colour[1], 256 - colour[2]]
     return invertedColour
+
+def pastle():
+    colour = rgb()
+    rgbs = random.randint(1, 3)
+    if rgbs == 1:
+        colour[0] = 255
+        randomDirection = random.randint(1, 2)
+        if randomDirection == 1:
+            colour[1] = random.randint(0, 210)
+        elif randomDirection == 2:
+            colour[2] = random.randint(0, 210)
+    elif rgbs == 2:
+        colour[1] = 255
+        randomDirection = random.randint(1, 2)
+        if randomDirection == 1:
+            colour[0] = random.randint(0, 210)
+        elif randomDirection == 2:
+            colour[2] = random.randint(0, 210)
+    else:
+        colour[2] = 255
+        randomDirection = random.randint(1, 2)
+        if randomDirection == 1:
+            colour[1] = random.randint(0, 210)
+        elif randomDirection == 2:
+            colour[0] = random.randint(0, 210)
+    return colour
 
 img = np.zeros((height,width,3), np.uint8)
 
@@ -179,10 +204,21 @@ if type_of_generation == 5:
         print(colours[4-i], "-->", inverteds[4-i])
     cv2.imshow("Image", img)
 
+if type_of_generation == 6:
+    print("The colours are:")
+    color = pastle()
+    for i in range(5):
+        for j in range(500-100*i):
+            for k in range(img.shape[1]):
+                img[j][k] = color
+    cv2.imshow("image", img)
+
+
+
 cv2.waitKey(0)
 
 #instead of using random to make sure there are no dupe image names use the colour generator file
-a = input("Would you like to save the image? [Y/N]")
+a = input("Would you like to save the image? [Y/N] \n")
 if a == "Y":
     name = random.randint(1, 2)
     if name == 1:
@@ -191,3 +227,4 @@ if a == "Y":
         cv2.imwrite("Gradient_{}.png".format(file_header), img)
 
 cv2.destroyAllWindows()
+
