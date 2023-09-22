@@ -1,9 +1,6 @@
-# Random-Color-Generator
+Random Colour Generator
 
-This is one of my many projects in python.
-For this project I am using OpenCV and random to create a random colour generator.
-This project was inspired by coolors.co and I wanted to create something similar
-However instead of purchasing their subscription for their extra features I created them myself.
-This project was made in one day and is still under development
-
-When running the python file you will need to install the openCV package and please note that OpenCV returns RBG values not RGB
+The way this project works is by generating an array of five different colours.
+There are a handful of methods that change the array.
+For example one method is a gradient that takes the averages of 2 colours and returns the values.
+I was inspired to make this by a similar website and it's purpose is to inspire me with colour pallets I would not normally think off.
