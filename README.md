@@ -1,8 +1,12 @@
-Random Colour Generator
+# Random Colour Generator!
+Random colour generator...
 
-The way this project works is by generating an array of five different colours.
-There are a handful of methods that change the array.
-For example one method is a gradient that takes the averages of 2 colours and returns the values.
-I was inspired to make this by a similar website and it's purpose is to inspire me with colour pallets I would not normally think off.
+This is a pallet generator made using Python and the OpenCV library
+I took inspiration from a similar project and designed the logic and presentation of each pallet
+examples include:
 
-With this project I learned about the openCV python package and I hope to use my gained experiences from this project in something similar. 
+![Gradient1](https://github.com/frozenPigeons/Random-Color-Generator/assets/118379320/36dbb1d1-bc4e-4ae0-98b6-57342449de65)
+
+![Gradient2](https://github.com/frozenPigeons/Random-Color-Generator/assets/118379320/5390313a-f7b9-4a75-a1b8-bc9e3348b739)
+
+![Gradient3](https://github.com/frozenPigeons/Random-Color-Generator/assets/118379320/49c00fb5-cd99-413b-8952-e8016bfce7db)
